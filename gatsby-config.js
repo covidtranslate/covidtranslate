@@ -7,7 +7,7 @@ let siteHostname = 'covidtranslate.org'
 if (process.env.PULL_REQUEST) {
   siteUrl = process.env.DEPLOY_PRIME_URL
   siteHostname = `deploy-preview-${process.env.REVIEW_ID}--covidtranslate.netlify.app`
-} else if (process.env.BRANCH === 'master') {
+} else if (process.env.HEAD === 'master') {
   siteUrl = process.env.URL
   siteHostname = 'covidtranslate.netlify.app'
 }
