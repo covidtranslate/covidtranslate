@@ -1,21 +1,50 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import { HomeLayout } from '@components/layouts'
+import { LinkCTASection, PostFeed } from '@components/common'
+import {
+  KCDC_RESPONSE_GUIDELINES,
+  TEST_SITE_INSTALLATION_GUIDE,
+  CONTACT_TRACING_STRATEGY,
+  SEJONG_CITY_DRIVE_THRU_MANUAL,
+  KCDC_SCREENING_CENTER_GUIDE,
+  KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES,
+  KCDC_DRIVE_THRU_MANUAL,
+} from '@posts'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const actions = [
+    {
+      sectionName: null,
+      links: [
+        {
+          text: 'Give your feedback on next translations',
+          link:
+            'https://docs.google.com/forms/d/e/1FAIpQLScvWqH-t7sUdebVFgfeqOoK8FcUKiFcUCLlH_UUuUPzy69FtQ/viewform',
+        },
+        {
+          text: 'Get the playbook & glossary',
+          link: '/kcdc-covid-19-response-guidelines',
+        },
+        { text: 'More resources', link: '/covid-19-resources' },
+      ],
+    },
+  ]
+
+  return (
+    <HomeLayout>
+      <LinkCTASection actions={actions} />
+      <PostFeed posts={[KCDC_DRIVE_THRU_MANUAL]} />
+      <PostFeed posts={[KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES]} />
+      <PostFeed
+        posts={[KCDC_SCREENING_CENTER_GUIDE, SEJONG_CITY_DRIVE_THRU_MANUAL]}
+      />
+      <PostFeed posts={[KCDC_RESPONSE_GUIDELINES]} />
+      <PostFeed
+        posts={[CONTACT_TRACING_STRATEGY, TEST_SITE_INSTALLATION_GUIDE]}
+      />
+    </HomeLayout>
+  )
+}
 
 export default IndexPage
