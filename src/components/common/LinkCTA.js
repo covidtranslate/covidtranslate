@@ -33,16 +33,16 @@ export const LinkCTA = ({ text, link }) => {
         display: flex;
         align-items: center;
         & a {
-          color: ${theme.colors.blue};
-          font-size: 24px;
-          text-decoration: underline;
-          box-shadow: none;
-          transition: all 0.2s ease-in-out;
+          color: ${theme.colors.blue} !important;
+          font-size: 24px !important;
+          text-decoration: underline !important;
+          box-shadow: none !important;
+          transition: all 0.2s ease-in-out !important;
         }
         & a:hover {
-          color: ${theme.colors.blue_c};
-          text-decoration: underline;
-          box-shadow: none;
+          color: ${theme.colors.blue_c} !important;
+          text-decoration: underline !important;
+          box-shadow: none !important;
         }
       `}
     >
