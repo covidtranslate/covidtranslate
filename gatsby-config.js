@@ -2,6 +2,16 @@
 const path = require('path')
 const { oneLine } = require('common-tags')
 
+let siteUrl = 'https://covidtranslate.org'
+let siteHostname = 'covidtranslate.org'
+if (process.env.PULL_REQUEST) {
+  siteUrl = process.env.DEPLOY_PRIME_URL
+  siteHostname = `deploy-preview-${process.env.REVIEW_ID}--covidtranslate.netlify.app`
+} else if (process.env.BRANCH === 'master') {
+  siteUrl = process.env.URL
+  siteHostname = 'covidtranslate.netlify.app'
+}
+
 module.exports = {
   siteMetadata: {
     title: 'COVID Translate Project',
@@ -9,7 +19,7 @@ module.exports = {
       volunteers around the world whose mission is to spread knowledge
       worldwide to fight COVID-19`,
     author: '@COVID_Translate',
-    siteUrl: 'https://covidtranslate.org',
+    siteUrl,
     facebook: 'covidtranslateofficial',
     twitter: 'COVID_Translate',
     instagram: 'covid_translate',
@@ -41,7 +51,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'covidtranslate.org',
+        name: siteHostname,
         short_name: 'covidtranslate',
         start_url: '/',
         background_color: '#004aad',
