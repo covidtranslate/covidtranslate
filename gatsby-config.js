@@ -4,10 +4,10 @@ const { oneLine } = require('common-tags')
 
 let siteUrl = 'https://covidtranslate.org'
 let siteHostname = 'covidtranslate.org'
-if (process.env.PULL_REQUEST && process.env.HEAD !== 'master') {
+if (process.env.CONTEXT === 'deploy-preview') {
   siteUrl = process.env.DEPLOY_PRIME_URL
   siteHostname = `deploy-preview-${process.env.REVIEW_ID}--covidtranslate.netlify.app`
-} else if (process.env.HEAD === 'master') {
+} else if (process.env.CONTEXT === 'production') {
   siteUrl = process.env.URL
   siteHostname = 'covidtranslate.netlify.app'
 }
