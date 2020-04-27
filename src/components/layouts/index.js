@@ -1,3 +1,8 @@
 export { SiteWrapper } from './SiteWrapper'
+export { ErrorLayout } from './ErrorLayout'
+export { HomeLayout } from './HomeLayout'
+export { AboutLayout } from './AboutLayout'
+export { TagLayout } from './TagLayout'
+export { PostLayout } from './PostLayout'
 export { OuterContainer } from './OuterContainer'
 export { InnerContainer } from './InnerContainer'
