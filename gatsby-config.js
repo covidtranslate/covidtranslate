@@ -1,11 +1,13 @@
 /* eslint-env node */
-
 const path = require('path')
+const { oneLine } = require('common-tags')
 
 module.exports = {
   siteMetadata: {
     title: 'COVID Translate Project',
-    description: 'Spreading knowledge worldwide to fight COVID-19',
+    description: oneLine`COVID Translate Project is led by a team of
+      volunteers around the world whose mission is to spread knowledge
+      worldwide to fight COVID-19`,
     author: '@COVID_Translate',
     siteUrl: 'https://covidtranslate.org',
     facebook: 'covidtranslateofficial',
