@@ -4,6 +4,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { Facebook, Twitter, Instagram, ExternalLink } from 'react-feather'
 
+const Z_INDEX_HIGH = 10
+const Z_INDEX_LOW = 1
+
 export const NavBar = ({ showTitle = false }) => {
   const {
     site: {
@@ -38,10 +41,13 @@ export const NavBar = ({ showTitle = false }) => {
         justify-content: space-between;
         align-items: flex-start;
         overflow: hidden;
+        z-index: ${Z_INDEX_LOW};
+        position: relative;
       `}
     >
       <div
         css={css`
+          position: relative;
           flex: 1 0 auto;
           display: flex;
         `}
@@ -55,13 +61,17 @@ export const NavBar = ({ showTitle = false }) => {
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
             margin-right: 10px;
-            padding-top: 10px;
+            padding: 10px 0 80px;
             font-weight: 500;
             letter-spacing: 0.2px;
             text-transform: uppercase;
             white-space: nowrap;
-
             -ms-overflow-scrolling: touch;
+
+            @media (max-width: 700px) {
+              margin-right: 0;
+              padding-left: 5vw;
+            }
           `}
         >
           {showTitle && (
@@ -78,8 +88,13 @@ export const NavBar = ({ showTitle = false }) => {
                 font-weight: bold;
                 letter-spacing: -0.5px;
                 text-transform: none;
+                position: relative;
+                z-index: ${Z_INDEX_LOW};
                 &:hover {
                   text-decoration: none;
+                }
+                @media (max-width: 700px) {
+                  margin-right: 48px;
                 }
               `}
             >
@@ -89,17 +104,25 @@ export const NavBar = ({ showTitle = false }) => {
           <div
             css={(theme) => css`
               align-self: flex-start;
+              position: relative;
               ul {
                 display: flex;
                 margin: 0 0 0 -12px;
                 padding: 0;
                 list-style: none;
                 transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                position: absolute;
+                z-index: ${Z_INDEX_HIGH};
               }
               li {
                 display: block;
                 margin: 0;
                 padding: 0;
+              }
+              @media (max-width: 700px) {
+                li:first-of-type > a {
+                  margin-left: -20px;
+                }
               }
               a {
                 position: relative;

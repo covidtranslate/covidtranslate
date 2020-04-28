@@ -12,6 +12,9 @@ const fixedPosition = css`
   top: 0;
   right: 0;
   left: 0;
+  background: #fff;
+  z-index: 10;
+  padding: 0;
 `
 
 export const OuterContainer = ({ fixedToTop = false, ...props }) => {
