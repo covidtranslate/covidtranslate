@@ -57,7 +57,7 @@ export const TagLayout = ({ children, numberOfPosts, tag }) => {
 
                 @media (max-width: 500px) {
                   font-size: 4.2rem;
-                  text-align: center;
+                  margin-bottom: 12px;
                 }
               `}
             >
@@ -88,7 +88,6 @@ export const TagLayout = ({ children, numberOfPosts, tag }) => {
       </header>
       <main
         css={css`
-          margin-top: 64px;
           background: #fff;
           position: relative;
           padding: 0 5vw 4vw;
