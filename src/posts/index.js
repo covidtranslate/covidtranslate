@@ -166,3 +166,23 @@ export const KCDC_DRIVE_THRU_MANUAL = {
   publishedAt: new Date('2020-04-26T00:30:00-04:00'),
   updatedAt: new Date('2020-04-26T00:30:00-04:00'),
 }
+
+export const MANAGEMENT_OF_HEALTHCARE_FACILITIES = {
+  id: 7,
+  slug: 'management-of-healthcare-facilities-with-confirmed-cases',
+  title: 'Management of healthcare facilities with confirmed cases',
+  excerpt: oneLine`How can healthcare facilities adapt when someone within
+    the facility is confirmed with a COVID-19 case or comes in close contact
+    with one? A lot of decisions have to be made rapidly. Learn more about
+    the management procedure guidelines from KCDC, ranging from organizing
+    the response team to rules of quarantine and isolation measures in the
+    facility.`,
+  author: COVID_TRANSLATE_TEAM,
+  // Temp override
+  tag: {
+    ...KCDC_RESPONSE_GUIDELINES_TAG,
+    slug: 'management-of-healthcare-facilities-with-confirmed-cases',
+  },
+  publishedAt: new Date('2020-04-28T01:30:00-04:00'),
+  updatedAt: new Date('2020-04-28T01:30:00-04:00'),
+}

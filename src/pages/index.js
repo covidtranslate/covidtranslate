@@ -10,6 +10,7 @@ import {
   KCDC_SCREENING_CENTER_GUIDE,
   KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES,
   KCDC_DRIVE_THRU_MANUAL,
+  MANAGEMENT_OF_HEALTHCARE_FACILITIES,
 } from '@posts'
 
 const IndexPage = () => {
@@ -34,7 +35,9 @@ const IndexPage = () => {
   return (
     <HomeLayout>
       <LinkCTASection actions={actions} />
-      <PostFeed posts={[KCDC_DRIVE_THRU_MANUAL]} />
+      <PostFeed
+        posts={[MANAGEMENT_OF_HEALTHCARE_FACILITIES, KCDC_DRIVE_THRU_MANUAL]}
+      />
       <PostFeed posts={[KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES]} />
       <PostFeed
         posts={[KCDC_SCREENING_CENTER_GUIDE, SEJONG_CITY_DRIVE_THRU_MANUAL]}
