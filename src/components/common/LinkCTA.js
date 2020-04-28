@@ -44,6 +44,12 @@ export const LinkCTA = ({ text, link }) => {
           text-decoration: underline !important;
           box-shadow: none !important;
         }
+        @media (max-width: 500px) {
+          padding-right: 7vw;
+          a {
+            font-size: 1.25em !important;
+          }
+        }
       `}
     >
       <LinkComponent {...linkProps}>

@@ -24,7 +24,7 @@ export const LinkCTASection = ({ actions }) => {
         padding: 24px 0 0;
 
         & > h3 {
-          margin: 36px 0 24px !important;
+          margin: 0 0 24px !important;
           font-size: 2.5rem !important;
           line-height: 1.3em !important;
           font-weight: 600 !important;

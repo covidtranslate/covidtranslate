@@ -103,6 +103,7 @@ export const HomeLayout = ({ children }) => {
                       line-height: 1.3em;
                       letter-spacing: 0;
                       text-align: center;
+                      margin-top: 16px;
                     }
                   }
                 `}
