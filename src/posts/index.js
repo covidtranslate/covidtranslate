@@ -94,25 +94,8 @@ export const SCREENING_CENTER_OPERATION_TAG = {
     COVID-19 screening centers`,
 }
 
-export const SEJONG_CITY_DRIVE_THRU_MANUAL = {
-  id: 4,
-  slug: 'drive-thru-manuals',
-  title: 'Drive-thru screening center operation manual in Sejong City',
-  excerpt: oneLine`This one-page manual describes the operational
-    steps of drive-thru screening centers installed throughout the
-    city of Sejong, South Korea's administrative capital with a
-    population of 280,000. It lays out in detail the roles of each
-    station at the drive-thru site as well as guidance and instructions
-    for site administrators from pre-screening preparations to
-    post-screening decontamination.`,
-  author: COVID_TRANSLATE_TEAM,
-  tag: SCREENING_CENTER_OPERATION_TAG,
-  publishedAt: new Date('2020-04-17T23:30:00-04:00'),
-  updatedAt: new Date('2020-04-17T23:30:00-04:00'),
-}
-
 export const KCDC_SCREENING_CENTER_GUIDE = {
-  id: 5,
+  id: 4,
   slug: 'screening-center-operation-guide',
   title: 'KCDC screening center operation guide',
   excerpt: oneLine`This guide from KCDC lays out the specifics of how a
@@ -127,7 +110,7 @@ export const KCDC_SCREENING_CENTER_GUIDE = {
 }
 
 export const KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES = {
-  id: 6,
+  id: 5,
   slug: 'kcdc-covid-19-response-guidelines/more-languages',
   title: 'KCDC COVID-19 Response Guidelines translated into more languages',
   excerpt: oneLine`Today, we're excited to announce the next major
@@ -150,20 +133,20 @@ export const KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES = {
   updatedAt: new Date('2020-04-20T22:00:00-04:00'),
 }
 
-export const KCDC_DRIVE_THRU_MANUAL = {
-  id: 7,
-  slug: 'kcdc-drive-thru-manual',
-  title: 'KCDC drive-thru manual',
-  excerpt: oneLine`This document from KCDC covers the basic operating
-    components of a drive-thru screening center. These screening centers
-    have five "stations"—appointment, registration, screening, specimen
-    collection, and patient disinfection and instruction—that can be set
-    up in one of two different ways, depending on each agency's situation.
-    Download the guide to learn more about the requirements and recommended
+export const DRIVE_THRU_MANUALS = {
+  id: 6,
+  slug: 'drive-thru-manuals',
+  title: 'Drive-thru manuals',
+  excerpt: oneLine`These documents cover the basic operating components
+    of a drive-thru screening center. These screening centers have five
+    "stations"—appointment, registration, screening, specimen collection,
+    and patient disinfection and instruction—that can be set up in one of
+    two different ways, depending on each agency's situation. Download
+    the guide to learn more about the requirements and recommended
     procedures for efficiently operating these screening centers.`,
   author: COVID_TRANSLATE_TEAM,
   tag: SCREENING_CENTER_OPERATION_TAG,
-  publishedAt: new Date('2020-04-26T00:30:00-04:00'),
+  publishedAt: new Date('2020-04-17T23:30:00-04:00'),
   updatedAt: new Date('2020-04-26T00:30:00-04:00'),
 }
 
