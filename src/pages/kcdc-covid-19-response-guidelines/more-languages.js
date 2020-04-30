@@ -20,6 +20,10 @@ const MoreLanguages = () => {
       sectionName: 'Appendix to the Guidelines:',
       links: [
         {
+          text: 'Русский (Russian 🇷🇺)',
+          link: '/CovidPlaybook_Appendix_RU_v1.0.pdf',
+        },
+        {
           text: 'Italiano (Italian 🇮🇹)',
           link: '/CovidPlaybook_Appendix_IT_v1.0.pdf',
         },

@@ -130,7 +130,7 @@ export const KCDC_RESPONSE_GUIDELINES_MORE_LANGUAGES = {
     slug: 'kcdc-covid-19-response-guidelines/more-languages',
   },
   publishedAt: new Date('2020-04-19T23:30:00-04:00'),
-  updatedAt: new Date('2020-04-20T22:00:00-04:00'),
+  updatedAt: new Date('2020-04-30T14:30:00-04:00'),
 }
 
 export const DRIVE_THRU_MANUALS = {
