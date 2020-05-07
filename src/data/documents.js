@@ -227,5 +227,25 @@ module.exports = {
         },
       ],
     },
+    {
+      id: 8,
+      category: DOCUMENT_CATEGORIES.other,
+      slug: 'walk-thru-booth-design',
+      title: 'Walk-thru booth design for COVID-19 testing',
+      author: authors.find((a) => a.id === 2),
+      publishedAt: new Date('2020-05-06T22:00:00-04:00'),
+      updatedAt: new Date('2020-05-06T22:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Walk-thru booth design for COVID-19 testing',
+              link: '/walk-thru-booth-design.pdf',
+            },
+          ],
+        },
+      ],
+    },
   ],
 }
