@@ -71,8 +71,7 @@ module.exports = {
       releases: [1],
       message: oneLine`Korea Centers for Disease Control and Prevention (KCDC) has
         released a series of amendments (7-4) to their COVID-19 playbook. We've
-        translated and added the amendment to the "Response Guidelines for
-        Local Governments" to the list of downloads.`,
+        translated and added the amendment to the list of downloads.`,
     },
     {
       id: 5,
@@ -83,7 +82,7 @@ module.exports = {
       releases: [1],
       message: oneLine`This is the second and last part of the series of
         amendments (7-4) to KCDC's COVID-19 playbook for local governments. It is
-        an amendment to the Appendix portion of KCDC's COVID-19 playbook.`,
+        an amendment to the Appendix portion of KCDC's response guidelines.`,
     },
     {
       id: 6,
@@ -92,9 +91,9 @@ module.exports = {
       slug: '2020-04-14',
       author: authors.find((a) => a.id === 1),
       releases: [1],
-      message: oneLine`Today we're adding a glossary of terms we built over time as
-        we were translating KCDC's documents. It is still a rough version, but we're
-        planning to polish and format the document in the near future.`,
+      message: oneLine`We're uploading a glossary of terms that we have been maintaining
+        over time as we were translating KCDC's documents. It is still in a rough format,
+        but we're planning to polish and clean up the document in the near future.`,
     },
     {
       id: 7,
@@ -166,7 +165,7 @@ module.exports = {
       author: authors.find((a) => a.id === 1),
       releases: [1],
       message: oneLine`Following the release yesterday for the Russian versions,
-        the Italian versions have now alos been added. Thank you again for all
+        the Italian versions are now complete and uploaded. Thank you again for all
         the volunteers!`,
     },
     {
