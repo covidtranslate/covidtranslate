@@ -1,70 +1,68 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { css } from '@emotion/core'
+import { graphql, useStaticQuery } from 'gatsby'
 
-import { ErrorLayout } from '@components/layouts'
+import { SiteLayout } from '@components/SiteLayout'
 
 const NotFoundPage = () => {
+  const {
+    site: {
+      siteMetadata: { title: siteTitle },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
+
   return (
-    <ErrorLayout>
+    <SiteLayout title={`Not Found - ${siteTitle}`} pathname="">
       <section
-        css={(theme) => css`
-          padding-bottom: 10vw;
-          border-bottom: 1px solid ${theme.colors.lightgrey_a};
+        css={css`
+          flex-grow: 1;
           text-align: center;
-
-          @media (max-width: 800px) {
-            padding-bottom: 16vw;
-          }
-
-          @media (max-width: 500px) {
-            padding-bottom: 14vw;
-          }
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         `}
       >
-        <h1
-          css={(theme) => css`
-            margin: 0;
-            color: ${theme.colors.lightgrey};
-            font-size: 12vw;
-            line-height: 1em;
-            letter-spacing: -5px;
-            opacity: 0.75;
-
-            @media (max-width: 800px) {
-              font-size: 11.2rem;
-            }
-          `}
-        >
-          404
-        </h1>
-        <p
-          css={(theme) => css`
-            margin: 0;
-            color: ${theme.colors.midgrey};
-            font-size: 3rem;
-            line-height: 1.3em;
-            font-weight: 400;
-
-            @media (max-width: 800px) {
-              margin: 5px 0 0 0;
-              font-size: 1.8rem;
-            }
-          `}
-        >
-          Page not found
-        </p>
-        <Link
-          to="/"
+        <div
           css={css`
-            display: inline-block;
-            margin-top: 5px;
+            margin-top: -64px;
           `}
         >
-          Go to the front page →
-        </Link>
+          <h1
+            css={(theme) => css`
+              margin: 0;
+              color: ${theme.colors.lightgrey.base};
+              font-size: 12vw;
+              line-height: 1em;
+              letter-spacing: -5px;
+              opacity: 0.75;
+            `}
+          >
+            404
+          </h1>
+          <p
+            css={(theme) => css`
+              margin: 0;
+              color: ${theme.colors.midgrey.base};
+              font-size: 3rem;
+              line-height: 1.3em;
+              font-weight: 400;
+            `}
+          >
+            Page not found
+          </p>
+        </div>
       </section>
-    </ErrorLayout>
+    </SiteLayout>
   )
 }
 

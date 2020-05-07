@@ -35,6 +35,7 @@ module.exports = {
           '@posts': 'src/posts',
           '@styles': 'src/styles',
           '@hooks': 'src/hooks',
+          '@data': 'src/data',
         },
         extensions: [],
       },
@@ -61,7 +62,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-google-analytics',

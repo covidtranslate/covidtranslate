@@ -1,20 +1,14 @@
 import { css } from '@emotion/core'
 
-import { theme } from './theme'
-
-/* Base styles: opinionated defaults
 /* ---------------------------------------------------------- */
-export const base = css`
+export const base = (theme) => css`
   html {
-    overflow-x: hidden;
-    overflow-y: scroll;
     font-size: 62.5%;
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
   body {
-    overflow-x: hidden;
-    color: ${theme.colors.midgrey_a};
+    color: ${theme.colors.midgrey.bolder};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.6rem;
@@ -24,7 +18,7 @@ export const base = css`
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
     background: #fff;
-
+    font-feature-settings: 'liga' on;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: 'liga' on;
@@ -32,18 +26,18 @@ export const base = css`
 
   ::selection {
     text-shadow: none;
-    background: ${theme.colors.blue_a};
+    background: ${theme.colors.blue.light};
   }
 
   hr {
     position: relative;
     display: block;
     width: 100%;
-    margin: 2.5em 0 3.5em;
+    margin: 2.5em 0 1.5em;
     padding: 0;
     height: 1px;
     border: 0;
-    border-top: 1px solid ${theme.colors.lightgrey_a};
+    border-top: 1px solid ${theme.colors.lightgrey.light};
   }
 
   audio,
@@ -109,7 +103,7 @@ export const base = css`
     float: left;
     margin: 0 20px 0 0;
     width: 120px;
-    color: ${theme.colors.darkgrey};
+    color: ${theme.colors.darkgrey.base};
     font-weight: 500;
     text-align: right;
   }
@@ -122,7 +116,7 @@ export const base = css`
   blockquote {
     margin: 1.5em 0;
     padding: 0 1.6em 0 1.6em;
-    border-left: 0.5em solid ${theme.colors.whitegrey};
+    border-left: 3px solid ${theme.colors.blue.base};
   }
 
   blockquote p {
@@ -150,8 +144,9 @@ export const base = css`
   }
 
   a {
-    color: ${theme.colors.blue_b};
+    color: ${theme.colors.blue.bold};
     text-decoration: none;
+    cursor: pointer;
   }
 
   a:hover {

@@ -1,31 +1,52 @@
 export const theme = {
   colors: {
-    blue: '#3eb0ef',
-    blue_a: '#cbeafb',
-    blue_b: '#26a8ed',
-    blue_c: '#107ebb',
-    green: '#a4d037',
-    purple: '#ad26b4',
-    yellow: '#fecd35',
-    red: '#f05230',
-    darkgrey: '#15171A',
-    darkgrey_a: '#090a0b',
-    darkgrey_b: '#424852',
-    darkgrey_c: '#2b2f36',
-    darkgrey_d: '#0e0f11',
-    midgrey: '#738a94',
-    midgrey_a: '#313b3f',
-    midgrey_b: '#92a3ab',
-    midgrey_c: '#3c484e',
-    lightgrey: '#c5d2d9',
-    lightgrey_a: '#e3e9ed',
-    lightgrey_b: '#e9eef1',
-    whitegrey: '#e5eff5',
-    whitegrey_a: '#f4f8fb',
-    whitegrey_b: '#e3ecf3',
-    pink: '#fa3a57',
-    brown: '#a3821a',
-    darkmode: '#191b1f',
+    blue: {
+      base: '#3eb0ef',
+      bold: '#26a8ed',
+      bolder: '#107ebb',
+      light: '#cbeafb',
+    },
+    green: {
+      base: '#a4d037',
+    },
+    purple: {
+      base: '#ad26b4',
+    },
+    yellow: {
+      base: '#fecd35',
+    },
+    red: {
+      base: '#f05230',
+    },
+    darkgrey: {
+      base: '#15171a',
+      bold: '#0e0f11',
+      bolder: '#090a0b',
+      light: '#2b2f36',
+      lighter: '#424852',
+    },
+    midgrey: {
+      base: '#738a94',
+      bold: '#3c484e',
+      bolder: '#313b3f',
+      light: '#92a3ab',
+    },
+    lightgrey: {
+      base: '#c5d2d9',
+      light: '#e3e9ed',
+      lighter: '#e9eef1',
+    },
+    whitegrey: {
+      base: '#e5eff5',
+      bold: '#e3ecf3',
+      light: '#f4f8fb',
+    },
+    pink: {
+      base: '#fa3a57',
+    },
+    brown: {
+      base: '#a3821a',
+    },
   },
   breakpoints: {
     xs: '500px',

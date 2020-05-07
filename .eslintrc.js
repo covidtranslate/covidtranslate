@@ -10,7 +10,7 @@ module.exports = {
       experimentalObjectRestSpread: true,
     },
   },
-  plugins: ['react', 'import'],
+  plugins: ['import', 'react', 'react-hooks'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -28,7 +28,12 @@ module.exports = {
         ['@posts', './src/posts'],
         ['@styles', './src/styles'],
         ['@hooks', './src/hooks'],
+        ['@data', './src/data'],
       ],
     },
+  },
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }
