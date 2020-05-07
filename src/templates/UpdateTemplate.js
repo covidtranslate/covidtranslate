@@ -55,7 +55,9 @@ const Update = ({ pageContext: { id: updateId } }) => {
         <h2 id={anchors[1].id} ref={anchorRefs[1]}>
           {anchors[1].label}
         </h2>
-        <p>{update.message}</p>
+        {update.message.map((m, idx) => (
+          <p key={idx}>{m}</p>
+        ))}
       </Post>
     </SiteLayout>
   )
