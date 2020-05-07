@@ -35,6 +35,7 @@ module.exports = {
           '@posts': 'src/posts',
           '@styles': 'src/styles',
           '@hooks': 'src/hooks',
+          '@data': 'src/data',
         },
         extensions: [],
       },
