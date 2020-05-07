@@ -1,4 +1,5 @@
 import React from 'react'
+import throttle from 'lodash.throttle'
 
 const API_URL = 'https://sheets.googleapis.com/v4/spreadsheets'
 const API_KEY = 'AIzaSyADMD4DdpEg7fY4qp6mHDvYCJWxLSf8Ohg'
@@ -63,4 +64,63 @@ export const useContributorSheet = () => {
   }, [])
 
   return [namesFirstColumn, namesSecondColumn]
+}
+
+export const useAnchorObservers = (anchors, deps = []) => {
+  const [currentFocus, setCurrentFocus] = React.useState('')
+
+  const refList = React.useRef(
+    anchors.map(() => {
+      return React.createRef()
+    })
+  )
+
+  React.useLayoutEffect(() => {
+    const handleScroll = throttle(
+      () => {
+        let idx = 0
+        while (idx < refList.current.length) {
+          const { id } = anchors[idx]
+
+          const ref = refList.current[idx]
+
+          if (!ref.current) {
+            idx += 1
+            continue
+          }
+
+          const nextRef = refList.current[idx + 1] || {
+            current: { offsetTop: document.body.scrollHeight },
+          }
+
+          const buffer = 4
+
+          if (window.scrollY < ref.current.offsetTop - buffer) {
+            setCurrentFocus('')
+            break
+          }
+
+          if (
+            window.scrollY >= ref.current.offsetTop - buffer &&
+            window.scrollY < nextRef.current.offsetTop - buffer
+          ) {
+            setCurrentFocus(id)
+            break
+          }
+
+          idx += 1
+        }
+      },
+      250,
+      { leading: true }
+    )
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [anchors, ...deps])
+
+  return [refList.current, currentFocus]
 }
