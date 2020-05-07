@@ -208,5 +208,14 @@ module.exports = {
         "Response Guidelines for Local Governments" has been uploaded.
         Thank you to our Russian volunteers!`,
     },
+    {
+      id: 15,
+      date: new Date('2020-05-06T23:00:00-04:00'),
+      title: 'May 6th, 2020',
+      slug: '2020-05-06',
+      author: authors.find((a) => a.id === 1),
+      releases: [1, 2, 9, 10, 11, 12],
+      message: oneLine`Dis is a big release =P`,
+    },
   ],
 }

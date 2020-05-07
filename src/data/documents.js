@@ -59,6 +59,10 @@ module.exports = {
               text: 'Italiano (Italian 🇮🇹)',
               link: '/CovidPlaybook_IT_v1.0.pdf',
             },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/CovidPlaybook_ES_v1.0.pdf',
+            },
           ],
         },
         {
@@ -112,15 +116,28 @@ module.exports = {
       updatedAt: new Date('2020-04-09T22:30:00-04:00'),
       actions: [
         {
-          sectionName: 'Downloads',
+          sectionName: 'Drive-through guide',
           links: [
             {
-              text: 'Drive-through guide',
+              text: 'English (English 🇺🇸)',
               link: '/COVID19-drive-through-test-site-instruction.pdf',
             },
             {
-              text: 'Walk-through guide',
+              text: 'Русский (Russian 🇷🇺)',
+              link: '/COVID19-drive-through-test-site-instruction_RU.pdf',
+            },
+          ],
+        },
+        {
+          sectionName: 'Walk-through guide',
+          links: [
+            {
+              text: 'English (English 🇺🇸)',
               link: '/COVID19-walk-through-test-site-instruction.pdf',
+            },
+            {
+              text: 'Русский (Russian 🇷🇺)',
+              link: '/COVID19-walk-through-test-site-instruction_RU.pdf',
             },
           ],
         },
@@ -242,6 +259,88 @@ module.exports = {
             {
               text: 'Walk-thru booth design for COVID-19 testing',
               link: '/walk-thru-booth-design.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 9,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'critical-care-guidelines',
+      title: 'Critical care guidelines',
+      author: authors.find((a) => a.id === 3),
+      publishedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Critical care guidelines',
+              link: '/critical-care-guidelines.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 10,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'hospital-level-healthcare-facilities-guidelines',
+      title: 'Hospital-level healthcare facilities guidelines',
+      author: authors.find((a) => a.id === 3),
+      publishedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Hospital-level healthcare facilities guidelines',
+              link: '/hospital-level-healthcare-facilities-guidelines.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 11,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'pediatric-care-guidelines',
+      title: 'Pediatric care guidelines',
+      author: authors.find((a) => a.id === 3),
+      publishedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Pediatric care guidelines',
+              link: '/pediatric-care-guidelines.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 12,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'operation-and-management-guidelines-for-inpatient-beds',
+      title:
+        'Operation and management guidelines for nationally-designated inpatient beds',
+      author: authors.find((a) => a.id === 1),
+      publishedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Part 1',
+              link:
+                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds-part-1.pdf',
             },
           ],
         },
