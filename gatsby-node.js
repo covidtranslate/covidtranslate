@@ -1,9 +1,13 @@
 /* eslint-env node */
 
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+exports.createPages = async ({ actions: { createPage } }) => {
+  const { data: UPDATES } = require('./src/data/updates')
 
-// You can delete this file if you're not using it
+  UPDATES.forEach((update) => {
+    createPage({
+      path: `/updates/${update.slug}`,
+      component: require.resolve('./src/templates/UpdateTemplate.js'),
+      context: { id: update.id },
+    })
+  })
+}
