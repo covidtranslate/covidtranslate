@@ -61,7 +61,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-google-analytics',
