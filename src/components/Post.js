@@ -78,6 +78,11 @@ export const Post = ({
                         border-radius: 100%;
                         background: ${theme.colors.lightgrey.base};
                         object-fit: cover;
+
+                        @media (max-width: ${theme.breakpoints.xs}) {
+                          width: 36px;
+                          height: 36px;
+                        }
                       `}
                     >
                       <User
