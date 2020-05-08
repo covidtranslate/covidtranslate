@@ -19,13 +19,17 @@ export const Post = ({
   return (
     <>
       <section
-        css={css`
+        css={(theme) => css`
           flex-grow: 1;
-          margin: 6rem 14rem 3rem 8rem;
+          flex-shrink: 5;
+          margin: 3rem 6rem;
           max-width: 720px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          @media (max-width: ${theme.breakpoints.md}) {
+            margin: 3rem 3rem;
+          }
         `}
       >
         <div
@@ -79,12 +83,12 @@ export const Post = ({
                       <User
                         color="#fff"
                         fill="#fff"
-                        css={css`
+                        css={(theme) => css`
                           margin-top: 2px;
                           width: 36px;
                           height: 36px;
 
-                          @media (max-width: 500px) {
+                          @media (max-width: ${theme.breakpoints.xs}) {
                             width: 32px;
                             height: 32px;
                           }

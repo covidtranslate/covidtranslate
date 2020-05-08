@@ -30,6 +30,7 @@ export const SiteLayout = ({ children, title, pathname }) => {
           css={css`
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
           `}
         >
           <TopNav />
@@ -38,6 +39,9 @@ export const SiteLayout = ({ children, title, pathname }) => {
               flex: 1;
               display: flex;
               justify-content: space-between;
+              @media (max-width: ${theme.breakpoints.sm}) {
+                margin-top: 64px;
+              }
             `}
           >
             {initialState && <SideNav initialState={initialState} />}
