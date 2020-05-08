@@ -170,7 +170,7 @@ export const base = (theme) => css`
     font-size: 5.5rem;
     font-weight: 600;
   }
-  @media (max-width: 500px) {
+  @media (max-width: ${theme.breakpoints.xs}) {
     h1 {
       font-size: 2.2rem;
     }
@@ -180,7 +180,7 @@ export const base = (theme) => css`
     margin: 1.5em 0 0.5em 0;
     font-size: 2.2rem;
   }
-  @media (max-width: 500px) {
+  @media (max-width: ${theme.breakpoints.xs}) {
     h2 {
       font-size: 1.8rem;
     }
@@ -191,7 +191,7 @@ export const base = (theme) => css`
     font-size: 1.8rem;
     font-weight: 500;
   }
-  @media (max-width: 500px) {
+  @media (max-width: ${theme.breakpoints.xs}) {
     h3 {
       font-size: 1.7rem;
     }

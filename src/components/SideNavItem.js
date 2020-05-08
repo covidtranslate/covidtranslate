@@ -24,7 +24,9 @@ export const SideNavItem = ({
         <Link
           to={`/${slug}`}
           onClick={() => {
-            onNavigate()
+            if (onNavigate) {
+              onNavigate()
+            }
           }}
           css={(theme) => css`
             color: ${theme.colors.midgrey.bolder};
@@ -99,7 +101,9 @@ export const SideNavItem = ({
               <Link
                 to={`/${pathPrefix}/${u.slug}`}
                 onClick={() => {
-                  onNavigate()
+                  if (onNavigate) {
+                    onNavigate()
+                  }
                 }}
                 css={(theme) => css`
                   color: ${theme.colors.midgrey.bolder};

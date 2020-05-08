@@ -7,8 +7,11 @@ import { PostNavItem } from '@components/PostNavItem'
 export const PostNav = ({ top, anchors = [], focus }) => {
   return (
     <section
-      css={css`
+      css={(theme) => css`
         flex: 0 0 240px;
+        @media (max-width: ${theme.breakpoints.lg}) {
+          display: none;
+        }
       `}
     >
       <aside

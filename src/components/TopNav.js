@@ -1,8 +1,27 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { useTheme } from 'emotion-theming'
-import { Facebook, Twitter, Instagram } from 'react-feather'
+import { Facebook, Twitter, Instagram, Menu, X } from 'react-feather'
+
+import { SideNavItem } from '@components/SideNavItem'
+import { data as UPDATES } from '@data/updates'
+import { data as DOCUMENTS, categories } from '@data/documents'
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'INIT':
+      return action.payload
+    case 'TOGGLE_UPDATES':
+      return { ...state, UPDATES: !state.UPDATES }
+    case 'TOGGLE_GUIDELINES':
+      return { ...state, GUIDELINES: !state.GUIDELINES }
+    case 'TOGGLE_RESOURCES':
+      return { ...state, RESOURCES: !state.RESOURCES }
+    default:
+      return state
+  }
+}
 
 export const TopNav = () => {
   const theme = useTheme()
@@ -41,13 +60,170 @@ export const TopNav = () => {
   const instagramUrl =
     instagram && `https://instagram.com/${instagram.replace(/^\//, ``)}`
 
-  return (
+  const [isMenuOpen, toggleMenu] = React.useState(false)
+
+  const [state, dispatch] = React.useReducer(reducer, {})
+
+  const GUIDELINES = DOCUMENTS.filter((d) => d.category === categories.KCDC)
+  const RESOURCES = DOCUMENTS.filter((d) => d.category === categories.other)
+
+  const [hasOverflow, setHasOverflow] = React.useState(false)
+  const navListContainerRef = React.useRef()
+  const navListEnd = React.useRef()
+
+  React.useLayoutEffect(() => {
+    let observer = null
+    if (isMenuOpen) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setHasOverflow(!entry.isIntersecting)
+        },
+        { root: navListContainerRef.current, threshold: 1 }
+      )
+
+      observer.observe(navListEnd.current)
+    }
+
+    return () => {
+      if (observer) {
+        observer.disconnect()
+      }
+    }
+  }, [isMenuOpen])
+
+  React.useEffect(() => {
+    dispatch({
+      type: 'INIT',
+      payload: JSON.parse(
+        window.sessionStorage.getItem('SIDE_NAV_STATE') || '{}'
+      ),
+    })
+  }, [])
+
+  React.useEffect(() => {
+    window.sessionStorage.setItem('SIDE_NAV_STATE', JSON.stringify(state))
+  }, [state])
+
+  const updateToggle = React.useCallback(() => {
+    dispatch({ type: 'TOGGLE_UPDATES' })
+  }, [dispatch])
+  const guidelineToggle = React.useCallback(() => {
+    dispatch({ type: 'TOGGLE_GUIDELINES' })
+  }, [dispatch])
+  const resourcesToggle = React.useCallback(() => {
+    dispatch({ type: 'TOGGLE_RESOURCES' })
+  }, [dispatch])
+
+  return isMenuOpen ? (
+    <nav
+      css={(theme) => css`
+        display: none;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        background-color: #fff;
+        position: fixed;
+        z-index: 1;
+        @media (max-width: ${theme.breakpoints.sm}) {
+          display: flex;
+        }
+      `}
+    >
+      <div
+        css={css`
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        `}
+      >
+        <section
+          css={css`
+            padding-top: 20px;
+            padding-left: 16px;
+          `}
+        >
+          <X
+            size={24}
+            strokeWidth={2}
+            color={theme.colors.darkgrey.base}
+            css={(theme) => css`
+              display: none;
+              cursor: pointer;
+              @media (max-width: ${theme.breakpoints.sm}) {
+                display: block;
+              }
+            `}
+            onClick={() => {
+              toggleMenu((prevState) => !prevState)
+            }}
+          />
+        </section>
+        <section
+          ref={navListContainerRef}
+          css={css({
+            flex: 1,
+            overflow: 'auto',
+            paddingTop: 24,
+            transition: 'box-shadow 0.2s ease-in-out',
+            ...(hasOverflow && {
+              boxShadow: 'inset 0 -40px 20px -35px rgba(0, 0, 0, 1);',
+            }),
+          })}
+        >
+          <ul
+            css={css`
+              margin: 0;
+              list-style: none;
+              padding-left: 8px;
+              padding-right: 8px;
+            `}
+          >
+            <SideNavItem label="Home" slug="" />
+            <SideNavItem label="About" slug="about" />
+            <SideNavItem
+              label="KCDC Guidelines"
+              pathPrefix={categories.KCDC}
+              posts={GUIDELINES}
+              isOpen={state.GUIDELINES}
+              onToggleOpen={guidelineToggle}
+            />
+            <SideNavItem
+              label="More Resources"
+              pathPrefix={categories.other}
+              posts={RESOURCES}
+              isOpen={state.RESOURCES}
+              onToggleOpen={resourcesToggle}
+            />
+            <SideNavItem
+              label="Archive"
+              pathPrefix="updates"
+              posts={UPDATES.slice().reverse()}
+              isOpen={state.UPDATES}
+              onToggleOpen={updateToggle}
+            />
+            <li
+              ref={navListEnd}
+              css={css`
+                height: 1px;
+              `}
+            ></li>
+          </ul>
+        </section>
+      </div>
+    </nav>
+  ) : (
     <nav
       css={(theme) => css`
         height: 64px;
         display: flex;
         justify-content: space-between;
         box-shadow: 0 2px 6px -4px ${theme.colors.darkgrey.bolder};
+        background-color: #fff;
+        width: 100%;
+        @media (max-width: ${theme.breakpoints.sm}) {
+          position: fixed;
+          z-index: 1;
+        }
       `}
     >
       <div
@@ -58,29 +234,66 @@ export const TopNav = () => {
         `}
       >
         <img
-          css={css`
+          css={(theme) => css`
             display: block;
             width: 30px;
+            @media (max-width: ${theme.breakpoints.sm}) {
+              display: none;
+            }
           `}
           src={fixed.src}
           alt="COVID Translate Project"
         />
+        <Menu
+          size={24}
+          strokeWidth={2}
+          color={theme.colors.darkgrey.base}
+          css={(theme) => css`
+            display: none;
+            cursor: pointer;
+            @media (max-width: ${theme.breakpoints.sm}) {
+              display: block;
+            }
+          `}
+          onClick={() => {
+            toggleMenu((prevState) => !prevState)
+          }}
+        />
         <h1
-          css={css`
+          css={(theme) => css`
             margin: 0;
             margin-left: 16px;
             margin-right: 16px;
             font-size: 2rem;
             line-height: 1em;
             font-weight: 600;
+            @media (max-width: ${theme.breakpoints.sm}) {
+              margin-left: 12px;
+              font-size: 1.5rem;
+            }
           `}
         >
-          COVID Translate Project
+          <Link
+            to="/"
+            css={(theme) =>
+              css`
+                color: ${theme.colors.midgrey.bolder};
+                :hover {
+                  text-decoration: none;
+                }
+              `
+            }
+          >
+            COVID Translate Project
+          </Link>
         </h1>
         <span
-          css={css`
+          css={(theme) => css`
             font-size: 0.75em;
             margin-top: 0.3em;
+            @media (max-width: ${theme.breakpoints.md}) {
+              display: none;
+            }
           `}
         >
           Spreading knowledge worldwide to fight COVID-19
@@ -96,10 +309,21 @@ export const TopNav = () => {
         `}
       >
         <a
-          css={css`
+          css={(theme) => css`
             opacity: 0.8;
             &:hover {
               opacity: 1;
+            }
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+            @media (max-width: ${theme.breakpoints.sm}) {
+              line-height: 14px;
+              svg {
+                height: 14px;
+                width: 14px;
+              }
             }
           `}
           href={facebookUrl}
@@ -115,10 +339,21 @@ export const TopNav = () => {
           />
         </a>
         <a
-          css={css`
+          css={(theme) => css`
             opacity: 0.8;
             &:hover {
               opacity: 1;
+            }
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+            @media (max-width: ${theme.breakpoints.sm}) {
+              line-height: 14px;
+              svg {
+                height: 14px;
+                width: 14px;
+              }
             }
           `}
           href={twitterUrl}
@@ -134,10 +369,21 @@ export const TopNav = () => {
           />
         </a>
         <a
-          css={css`
+          css={(theme) => css`
             opacity: 0.8;
             &:hover {
               opacity: 1;
+            }
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+            @media (max-width: ${theme.breakpoints.sm}) {
+              line-height: 14px;
+              svg {
+                height: 14px;
+                width: 14px;
+              }
             }
           `}
           href={instagramUrl}

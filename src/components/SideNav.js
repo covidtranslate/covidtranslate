@@ -10,8 +10,6 @@ import { data as DOCUMENTS, categories } from '@data/documents'
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'INIT':
-      return action.payload
     case 'TOGGLE_UPDATES':
       return { ...state, UPDATES: !state.UPDATES }
     case 'TOGGLE_GUIDELINES':
@@ -72,8 +70,14 @@ export const SideNav = ({ initialState }) => {
 
   return (
     <section
-      css={css`
+      css={(theme) => css`
         flex: 0 0 280px;
+        @media (max-width: ${theme.breakpoints.md}) {
+          flex: 0 1 280px;
+        }
+        @media (max-width: ${theme.breakpoints.sm}) {
+          display: none;
+        }
       `}
     >
       <aside
