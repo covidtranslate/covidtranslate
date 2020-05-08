@@ -242,7 +242,7 @@ module.exports = {
       title: 'May 6th, 2020',
       slug: '2020-05-06',
       author: authors.find((a) => a.id === 1),
-      releases: [1, 2, 9, 10, 11, 12],
+      releases: [1, 2, 8, 9, 10, 11, 12],
       message: [
         oneLine`Today, we're excited to share a number of new documents that were
         worked on by volunteers around the world! First, our amazing Spanish
@@ -255,11 +255,15 @@ module.exports = {
         around the world.`,
         oneLine`Also, a team of volunteers working with the African Future Foundation
         (AFF) and the Korean Global Health Forum (KGHF) have kindly shared with us the
-        translations that they have been working on. These are trnslations of three
+        translations that they have been working on. These are translations of three
         guidelines published by the KCDC: "Critical care guidelines", "Hospital-level
         healthcare facilities guidelines", and "Pediatric care guidelines". Thank you
         all for sharing, and we deeply appreciate your effort to help spread this
         information to more parts of the world!`,
+        oneLine`Next, SeungCheol Ohk and his team shared with us a new document that
+        describes how to build a walk-thru booth for COVID-19 testing. This was very
+        interesting to see, with focus on making a design that uses readily available
+        materials like acrylic and wooden boards.`,
         oneLine`Lastly, the COVID Translate Team has begun translating KCDC's "Operation
         and management guidelines for nationally-designated inpatient beds". Today, we're
         sharing the first part of this document, and we'll be uploading more in the near
