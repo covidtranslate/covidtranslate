@@ -263,7 +263,7 @@ module.exports = {
         oneLine`Next, SeungCheol Ohk and his team shared with us a new document that
         describes how to build a walk-thru booth for COVID-19 testing. This was very
         interesting to see, with focus on making a design that uses readily available
-        materials like acrylic and wooden boards.`,
+        materials like acrylic and wooden boards. Thank you for sharing this!`,
         oneLine`Lastly, the COVID Translate Team has begun translating KCDC's "Operation
         and management guidelines for nationally-designated inpatient beds". Today, we're
         sharing the first part of this document, and we'll be uploading more in the near
