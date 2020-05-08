@@ -33,7 +33,7 @@ const IndexPage = () => {
   const recentUpdates = updates.slice(1, 4)
 
   const anchors = [
-    { id: 'new', label: 'New' },
+    { id: 'latest-update', label: 'Latest update' },
     { id: 'more-recent-updates', label: 'More recent updates' },
   ]
 
@@ -47,7 +47,7 @@ const IndexPage = () => {
         focus={currentFocus}
       >
         <h2 id={anchors[0].id} ref={anchorRefs[0]}>
-          {anchors[0].label}
+          {anchors[0].label} ({newUpdate.title})
         </h2>
         <section>
           <p

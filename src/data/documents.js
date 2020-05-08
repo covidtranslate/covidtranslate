@@ -38,7 +38,7 @@ module.exports = {
       title: 'Response guidelines for local governments',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-06T22:00:00-04:00'),
-      updatedAt: new Date('2020-04-30T14:30:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
       actions: [
         {
           sectionName: 'Response guidelines',
@@ -113,7 +113,7 @@ module.exports = {
       title: 'COVID-19 test site installation guide',
       author: authors.find((a) => a.id === 2),
       publishedAt: new Date('2020-04-09T22:30:00-04:00'),
-      updatedAt: new Date('2020-04-09T22:30:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
       actions: [
         {
           sectionName: 'Drive-through guide',

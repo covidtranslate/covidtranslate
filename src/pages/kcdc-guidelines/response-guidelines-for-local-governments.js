@@ -86,14 +86,13 @@ const ResponseGuidelinesForLocalGovts = () => {
           around the world as they devise their battle plans against COVID-19.
         </p>
         <p>
-          We are releasing version 1.0 today after carefully reviewing,
-          formatting, and correcting our{' '}
+          The version 1.0 uploaded here is an update to the{' '}
           <Link to="/assets/CovidPlaybook_EN_v0.9.pdf">
             previous version (v0.9)
-          </Link>
-          . We hope that this document will be a helpful reference to those who
-          are seeking in-depth information on how to respond to this
-          unprecendented crisis.
+          </Link>{' '}
+          after careful review by our editorial teams. We hope that this
+          document will be a helpful reference to those who are seeking in-depth
+          information on how to respond to this unprecendented crisis.
         </p>
       </Post>
     </SiteLayout>
