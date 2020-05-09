@@ -126,6 +126,10 @@ module.exports = {
               text: 'Русский (Russian 🇷🇺)',
               link: '/COVID19-drive-through-test-site-instruction_RU.pdf',
             },
+            {
+              text: 'Italiano (Italian 🇮🇹)',
+              link: '/COVID19-drive-through-test-site-instruction_IT.pdf',
+            },
           ],
         },
         {

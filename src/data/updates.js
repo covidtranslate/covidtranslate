@@ -248,10 +248,10 @@ module.exports = {
         worked on by volunteers around the world! First, our amazing Spanish
         translators have completed their work on the KCDC response guidelines for
         local governments. This is now added to the collection of translations in
-        Russian, Romanian, Italian, and English. In addition, our Russian 
+        Russian, Romanian, Italian, and English. In addition, our Russian and Italian
         translators have completed their translation of the test site installation
         guides that were posted about a month ago. Once again, thank you for all
-        your hard work, and we hope that this knowledge can reach even more peopl
+        your hard work, and we hope that this knowledge can reach even more people
         around the world.`,
         oneLine`Also, a team of volunteers working with the African Future Foundation
         (AFF) and the Korean Global Health Forum (KGHF) have kindly shared with us the
