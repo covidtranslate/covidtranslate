@@ -19,7 +19,7 @@ const RoutineDistancingGuideliens = () => {
   const [anchorRefs, currentFocus] = useAnchorObservers(anchors, [])
 
   return (
-    <SiteLayout title={doc.title} pathname={`/kcdc-guidelines/${doc.slug}`}>
+    <SiteLayout title={doc.title} pathname={`/${doc.category}/${doc.slug}`}>
       <Post
         title={doc.title}
         author={doc.author}

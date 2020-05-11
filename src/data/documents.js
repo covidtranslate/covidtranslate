@@ -352,7 +352,7 @@ module.exports = {
     },
     {
       id: 13,
-      category: DOCUMENT_CATEGORIES.KCDC,
+      category: DOCUMENT_CATEGORIES.other,
       slug: 'routine-distancing-guidelines',
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),

@@ -25,3 +25,7 @@
 [[redirects]]
   from = "/kcdc-covid-19-response-guidelines/more-languages"
   to = "/kcdc-guidelines/response-guidelines-for-local-governments"
+
+[[redirects]]
+  from = "/kcdc-guidelines/routine-distancing-guidelines"
+  to = "/more-resources/routine-distancing-guidelines"
