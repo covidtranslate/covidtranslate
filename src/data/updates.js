@@ -278,7 +278,7 @@ module.exports = {
       author: authors.find((a) => a.id === 1),
       releases: [13],
       message: [
-        oneLine`As some places around the world begin to loosen restrictions, the KCDC
+        oneLine`As some places around the world begin to loosen restrictions, the Korean government
         has released guidelines for Routine Distancing in Daily Life, a guide to maintaining
         certain distancing and hygiene measures while resuming at least a portion of normal
         operations. It includes guidelines for customer-facing businesses, outdoor venues
