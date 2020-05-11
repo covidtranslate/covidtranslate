@@ -67,7 +67,7 @@ export const Post = ({
                     `}
                   >
                     <Link
-                      to={`/${author.slug}`}
+                      to={`/${author.link}`}
                       css={(theme) => css`
                         display: block;
                         overflow: hidden;

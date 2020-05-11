@@ -350,5 +350,25 @@ module.exports = {
         },
       ],
     },
+    {
+      id: 13,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'routine-distancing-guidelines',
+      title: 'Detailed guidelines for routine distancing in daily life',
+      author: authors.find((a) => a.id === 1),
+      publishedAt: new Date('2020-05-11T09:30:00-04:00'),
+      updatedAt: new Date('2020-05-11T09:30:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'Routine Distancing Guidelines',
+              link: '/routine-distancing-guidelines_EN.pdf',
+            },
+          ],
+        },
+      ],
+    },
   ],
 }

@@ -270,5 +270,23 @@ module.exports = {
         future.`,
       ],
     },
+    {
+      id: 16,
+      date: new Date('2020-05-11T09:30:00-04:00'),
+      title: 'May 11th, 2020',
+      slug: '2020-05-11',
+      author: authors.find((a) => a.id === 1),
+      releases: [13],
+      message: [
+        oneLine`As some places around the world begin to loosen restrictions, the KCDC
+        has released guidelines for Routine Distancing in Daily Life, a guide to maintaining
+        certain distancing and hygiene measures while resuming at least a portion of normal
+        operations. It includes guidelines for customer-facing businesses, outdoor venues
+        like campgrounds and stadiums, public facilities such as libraries and parks, as well
+        as other situations in which people normally gather. Each section has a clearly explained
+        list of procedures to follow which might prove useful to those resuming some regular
+        activities.`,
+      ],
+    },
   ],
 }
