@@ -194,14 +194,18 @@ module.exports = {
       title: 'Screening center operation guide',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-19T23:30:00-04:00'),
-      updatedAt: new Date('2020-04-19T23:30:00-04:00'),
+      updatedAt: new Date('2020-05-15T09:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Screening center operation guidelines',
+              text: 'English (English 🇺🇸)',
               link: '/screening-center-operation-guide.pdf',
+            },
+            {
+              text: 'Italiano (Italian 🇮🇹)',
+              link: '/screening-center-operation-guide_IT.pdf',
             },
           ],
         },
@@ -357,7 +361,7 @@ module.exports = {
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-11T09:30:00-04:00'),
-      updatedAt: new Date('2020-05-11T09:30:00-04:00'),
+      updatedAt: new Date('2020-05-15T09:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
