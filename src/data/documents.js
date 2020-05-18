@@ -361,7 +361,7 @@ module.exports = {
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-11T09:30:00-04:00'),
-      updatedAt: new Date('2020-05-15T09:00:00-04:00'),
+      updatedAt: new Date('2020-05-17T20:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -369,6 +369,10 @@ module.exports = {
             {
               text: 'English (English 🇺🇸)',
               link: '/routine-distancing-guidelines_EN.pdf',
+            },
+            {
+              text: 'Русский (Russian 🇷🇺)',
+              link: '/routine-distancing-guidelines_RU.pdf',
             },
           ],
         },
