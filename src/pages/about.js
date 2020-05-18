@@ -26,8 +26,8 @@ const AboutPage = () => {
   const [namesFirstColumn, namesSecondColumn] = useContributorSheet()
   const anchors = [
     { id: 'our-story', label: 'Our story' },
-    { id: 'join-us', label: 'Join us' },
     { id: 'our-volunteers', label: 'Our volunteers' },
+    { id: 'contact', label: 'Contact' },
   ]
 
   const [anchorRefs, currentFocus] = useAnchorObservers(anchors, [
@@ -93,31 +93,9 @@ const AboutPage = () => {
           agree: we now have international teams translating the protocol from
           English into other languages!
         </p>
-        <h2 id={anchors[1].id} ref={anchorRefs[1]}>
-          Join us
-        </h2>
-        <p>
-          We&apos;re still translating more KCDC protocols, though not at the
-          same mad pace.{' '}
-          <a href="https://forms.gle/9yakwuCyC6GNCbNF9">Join us</a> if
-          you&apos;d like to help, even if you can only spare a few hours a
-          week. We&apos;re now working on some more detailed and specific
-          protocols for hospitals, testing centers, etc.
-        </p>
-        <p>
-          Keep checking back here for new documents, or follow us on social
-          media to stay up to date. For general inquiries, please contact us at{' '}
-          <a href="mailto:covidtranslate@gmail.com">covidtranslate@gmail.com</a>
-          . For more information on translating into other languages, please
-          contact{' '}
-          <a href="mailto:covidtranslate.international@gmail.com">
-            covidtranslate.international@gmail.com
-          </a>
-          .
-        </p>
         {namesFirstColumn.length > 0 && (
           <>
-            <h2 id={anchors[2].id} ref={anchorRefs[2]}>
+            <h2 id={anchors[1].id} ref={anchorRefs[1]}>
               Our volunteers
             </h2>
             <div
@@ -147,6 +125,19 @@ const AboutPage = () => {
             </div>
           </>
         )}
+        <h2 id={anchors[2].id} ref={anchorRefs[2]}>
+          Contact
+        </h2>
+        <p>
+          For general inquiries, please contact us at{' '}
+          <a href="mailto:covidtranslate@gmail.com">covidtranslate@gmail.com</a>
+          . For more information on translating into other languages, please
+          contact{' '}
+          <a href="mailto:covidtranslate.international@gmail.com">
+            covidtranslate.international@gmail.com
+          </a>
+          .
+        </p>
       </Post>
     </SiteLayout>
   )
