@@ -242,15 +242,15 @@ module.exports = {
       title: 'May 6th, 2020',
       slug: '2020-05-06',
       author: authors.find((a) => a.id === 1),
-      releases: [1, 2, 8, 9, 10, 11, 12],
+      releases: [1, 2, 6, 8, 9, 10, 11, 12],
       message: [
         oneLine`Today, we're excited to share a number of new documents that were
         worked on by volunteers around the world! First, our amazing Spanish
         translators have completed their work on the KCDC response guidelines for
         local governments. This is now added to the collection of translations in
         Russian, Romanian, Italian, and English. In addition, our Russian and Italian
-        translators have completed their translation of the test site installation
-        guides that were posted about a month ago. Once again, thank you for all
+        translators have completed their translation of the walk-thru / drive-thru
+        installation guides that were posted about a month ago. Once again, thank you for all
         your hard work, and we hope that this knowledge can reach even more people
         around the world.`,
         oneLine`Also, a team of volunteers working with the African Future Foundation
@@ -286,6 +286,23 @@ module.exports = {
         as other situations in which people normally gather. Each section has a clearly explained
         list of procedures to follow which might prove useful to those resuming some regular
         activities.`,
+      ],
+    },
+    {
+      id: 17,
+      date: new Date('2020-05-17T20:00:00-04:00'),
+      title: 'May 17th, 2020',
+      slug: '2020-05-17',
+      author: authors.find((a) => a.id === 1),
+      releases: [12],
+      message: [
+        oneLine`In this document put out by the KCDC, you can find out about the ways hospitals
+        in South Korea are managed and operated under a national publich health emergency due to
+        infectious diseases. The document describes how inpatient beds are isolated from the rest
+        of the hosital, how healthcare professionals can protect themselves from getting infected,
+        how these efforts are operationalized and managed day-to-day, and many more. Please note
+        that we have not decided to translate Part 3 because it contains details that are very
+        specific to the Korean healthcare system.`,
       ],
     },
   ],

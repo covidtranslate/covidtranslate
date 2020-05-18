@@ -122,14 +122,6 @@ module.exports = {
               text: 'English (English 🇺🇸)',
               link: '/COVID19-drive-through-test-site-instruction.pdf',
             },
-            {
-              text: 'Русский (Russian 🇷🇺)',
-              link: '/COVID19-drive-through-test-site-instruction_RU.pdf',
-            },
-            {
-              text: 'Italiano (Italian 🇮🇹)',
-              link: '/COVID19-drive-through-test-site-instruction_IT.pdf',
-            },
           ],
         },
         {
@@ -160,7 +152,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Contact tracing strategy in South Korea',
+              text: 'English (English 🇺🇸)',
               link: '/tracking-strategy-in-Korea.pdf',
             },
           ],
@@ -180,7 +172,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Sejong City drive-thru manual',
+              text: 'English (English 🇺🇸)',
               link: '/Drive-thru_Manual_Sejong.pdf',
             },
           ],
@@ -218,14 +210,22 @@ module.exports = {
       title: 'Drive-thru manual',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-26T00:30:00-04:00'),
-      updatedAt: new Date('2020-04-26T00:30:00-04:00'),
+      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'KCDC drive-thru manual',
+              text: 'English (English 🇺🇸)',
               link: '/KCDC-drive-thru-manual.pdf',
+            },
+            {
+              text: 'Русский (Russian 🇷🇺)',
+              link: '/KCDC-drive-thru-manual_RU.pdf',
+            },
+            {
+              text: 'Italiano (Italian 🇮🇹)',
+              link: '/KCDC-drive-thru-manual_IT.pdf',
             },
           ],
         },
@@ -244,7 +244,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Management of healthcare facilities with confirmed cases',
+              text: 'English (English 🇺🇸)',
               link:
                 '/management-of-healthcare-facilities-with-confirmed-cases.pdf',
             },
@@ -265,7 +265,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Walk-thru booth design for COVID-19 testing',
+              text: 'English (English 🇺🇸)',
               link: '/walk-thru-booth-design.pdf',
             },
           ],
@@ -285,7 +285,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Critical care guidelines',
+              text: 'English (English 🇺🇸)',
               link: '/critical-care-guidelines.pdf',
             },
           ],
@@ -305,7 +305,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Hospital-level healthcare facilities guidelines',
+              text: 'English (English 🇺🇸)',
               link: '/hospital-level-healthcare-facilities-guidelines.pdf',
             },
           ],
@@ -325,7 +325,7 @@ module.exports = {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Pediatric care guidelines',
+              text: 'English (English 🇺🇸)',
               link: '/pediatric-care-guidelines.pdf',
             },
           ],
@@ -340,15 +340,15 @@ module.exports = {
         'Operation and management guidelines for nationally-designated inpatient beds',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-06T23:00:00-04:00'),
-      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-17T20:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Part 1',
+              text: 'English (English 🇺🇸)',
               link:
-                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds-part-1.pdf',
+                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds.pdf',
             },
           ],
         },
@@ -361,14 +361,18 @@ module.exports = {
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-11T09:30:00-04:00'),
-      updatedAt: new Date('2020-05-15T09:00:00-04:00'),
+      updatedAt: new Date('2020-05-17T20:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
             {
-              text: 'Routine Distancing Guidelines',
+              text: 'English (English 🇺🇸)',
               link: '/routine-distancing-guidelines_EN.pdf',
+            },
+            {
+              text: 'Русский (Russian 🇷🇺)',
+              link: '/routine-distancing-guidelines_RU.pdf',
             },
           ],
         },
