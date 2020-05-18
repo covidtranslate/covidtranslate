@@ -242,15 +242,15 @@ module.exports = {
       title: 'May 6th, 2020',
       slug: '2020-05-06',
       author: authors.find((a) => a.id === 1),
-      releases: [1, 2, 8, 9, 10, 11, 12],
+      releases: [1, 2, 6, 8, 9, 10, 11, 12],
       message: [
         oneLine`Today, we're excited to share a number of new documents that were
         worked on by volunteers around the world! First, our amazing Spanish
         translators have completed their work on the KCDC response guidelines for
         local governments. This is now added to the collection of translations in
         Russian, Romanian, Italian, and English. In addition, our Russian and Italian
-        translators have completed their translation of the test site installation
-        guides that were posted about a month ago. Once again, thank you for all
+        translators have completed their translation of the walk-thru / drive-thru
+        installation guides that were posted about a month ago. Once again, thank you for all
         your hard work, and we hope that this knowledge can reach even more people
         around the world.`,
         oneLine`Also, a team of volunteers working with the African Future Foundation
