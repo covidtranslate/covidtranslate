@@ -348,7 +348,7 @@ module.exports = {
             {
               text: 'English (English 🇺🇸)',
               link:
-                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds-part-1.pdf',
+                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds.pdf',
             },
           ],
         },

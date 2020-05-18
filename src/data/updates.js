@@ -288,5 +288,22 @@ module.exports = {
         activities.`,
       ],
     },
+    {
+      id: 17,
+      date: new Date('2020-05-17T20:00:00-04:00'),
+      title: 'May 17th, 2020',
+      slug: '2020-05-17',
+      author: authors.find((a) => a.id === 1),
+      releases: [12],
+      message: [
+        oneLine`In this document put out by the KCDC, you can find out about the ways hospitals
+        in South Korea are managed and operated under a national publich health emergency due to
+        infectious diseases. The document describes how inpatient beds are isolated from the rest
+        of the hosital, how healthcare professionals can protect themselves from getting infected,
+        how these efforts are operationalized and managed day-to-day, and many more. Please note
+        that we have not decided to translate Part 3 because it contains details that are very
+        specific to the Korean healthcare system.`,
+      ],
+    },
   ],
 }
