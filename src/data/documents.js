@@ -38,7 +38,7 @@ module.exports = {
       title: 'Response guidelines for local governments',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-06T22:00:00-04:00'),
-      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-05-21T23:30:00-04:00'),
       actions: [
         {
           sectionName: 'Response guidelines',
@@ -79,6 +79,10 @@ module.exports = {
             {
               text: 'Italiano (Italian 🇮🇹)',
               link: '/CovidPlaybook_Appendix_IT_v1.0.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/CovidPlaybook_Appendix_ES_v1.0.pdf',
             },
           ],
         },
