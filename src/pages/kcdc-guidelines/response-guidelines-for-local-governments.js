@@ -72,15 +72,6 @@ const ResponseGuidelinesForLocalGovts = () => {
           <Link to="/archive/CovidPlaybook_KR.pdf">here</Link>.
         </p>
         <p>
-          The newest version, titled &quot;코로나바이러스감염증-19 대응 지침
-          (지자체용) 7-4&quot;, can be downloaded from the{' '}
-          <OutboundLink href="https://www.cdc.go.kr/board/board.es?mid=a20507020000&bid=0019&act=view&list_no=366712&tag=&nPage=1">
-            KCDC website
-          </OutboundLink>
-          . It outlines guidance for South Korean local governments concerning
-          public health measures against COVID-19.
-        </p>
-        <p>
           This translation is a product of a team of volunteers working around
           the clock, who hope that the information will be useful to governments
           around the world as they devise their battle plans against COVID-19.
