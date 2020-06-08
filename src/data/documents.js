@@ -38,7 +38,7 @@ module.exports = {
       title: 'Response guidelines for local governments',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-06T22:00:00-04:00'),
-      updatedAt: new Date('2020-05-31T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-07T23:00:00-04:00'),
       actions: [
         {
           sectionName: 'Response guidelines',
@@ -63,6 +63,10 @@ module.exports = {
               text: 'Español (Spanish 🇪🇸)',
               link: '/CovidPlaybook_ES_v1.0.pdf',
             },
+            {
+              text: 'Bahasa Indonesia (Indonesian 🇮🇩)',
+              link: '/CovidPlaybook_ID_v1.0.pdf',
+            },
           ],
         },
         {
@@ -83,6 +87,10 @@ module.exports = {
             {
               text: 'Español (Spanish 🇪🇸)',
               link: '/CovidPlaybook_Appendix_ES_v1.0.pdf',
+            },
+            {
+              text: 'Bahasa Indonesia (Indonesian 🇮🇩)',
+              link: '/CovidPlaybook_Appendix_ID_v1.0.pdf',
             },
           ],
         },
@@ -117,7 +125,7 @@ module.exports = {
       title: 'COVID-19 test site installation guide',
       author: authors.find((a) => a.id === 2),
       publishedAt: new Date('2020-04-09T22:30:00-04:00'),
-      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-07T23:00:00-04:00'),
       actions: [
         {
           sectionName: 'Drive-through guide',
@@ -125,6 +133,10 @@ module.exports = {
             {
               text: 'English (English 🇺🇸)',
               link: '/COVID19-drive-through-test-site-instruction.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/COVID19-drive-through-test-site-instruction_ES.pdf',
             },
           ],
         },
@@ -381,6 +393,26 @@ module.exports = {
             {
               text: 'Italiano (Italian 🇮🇹)',
               link: '/routine-distancing-guidelines_IT.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 14,
+      category: DOCUMENT_CATEGORIES.other,
+      slug: 'mobile-testing-truck',
+      title: 'Mobile testing truck design',
+      author: authors.find((a) => a.id === 2),
+      publishedAt: new Date('2020-06-07T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-07T23:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'English (English 🇺🇸)',
+              link: '/mobile-testing-truck.pdf',
             },
           ],
         },
