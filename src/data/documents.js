@@ -38,7 +38,7 @@ module.exports = {
       title: 'Response guidelines for local governments',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-06T22:00:00-04:00'),
-      updatedAt: new Date('2020-06-07T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-18T20:30:00-04:00'),
       actions: [
         {
           sectionName: 'Response guidelines',
@@ -105,6 +105,10 @@ module.exports = {
               text: 'English (English 🇺🇸) - Appendix',
               link: '/CovidPlaybook_Appendix_EN_v1.0_Amendment_7-4.pdf',
             },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/CovidPlaybook_EN_v1.0_Amendment_7-4_ES.pdf',
+            },
           ],
         },
         {
@@ -125,7 +129,7 @@ module.exports = {
       title: 'COVID-19 test site installation guide',
       author: authors.find((a) => a.id === 2),
       publishedAt: new Date('2020-04-09T22:30:00-04:00'),
-      updatedAt: new Date('2020-06-07T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-18T20:30:00-04:00'),
       actions: [
         {
           sectionName: 'Drive-through guide',
@@ -150,6 +154,10 @@ module.exports = {
             {
               text: 'Русский (Russian 🇷🇺)',
               link: '/COVID19-walk-through-test-site-instruction_RU.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/COVID19-walk-through-test-site-instruction_ES.pdf',
             },
           ],
         },
@@ -377,7 +385,7 @@ module.exports = {
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-11T09:30:00-04:00'),
-      updatedAt: new Date('2020-05-31T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-18T20:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -393,6 +401,10 @@ module.exports = {
             {
               text: 'Italiano (Italian 🇮🇹)',
               link: '/routine-distancing-guidelines_IT.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/routine-distancing-guidelines_ES.pdf',
             },
           ],
         },
