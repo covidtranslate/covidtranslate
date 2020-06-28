@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       id: 2,
-      name: 'SeungCheol Ohk & Team',
+      name: 'AUPL Team',
       link: 'mailto:seungcheol.ohk@sciencespo.fr',
     },
     {
