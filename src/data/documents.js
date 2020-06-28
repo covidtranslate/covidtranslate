@@ -38,11 +38,15 @@ module.exports = {
       title: 'Response guidelines for local governments',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-06T22:00:00-04:00'),
-      updatedAt: new Date('2020-06-18T20:30:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Response guidelines',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/CovidPlaybook_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/CovidPlaybook_EN_v1.0.pdf',
@@ -72,6 +76,10 @@ module.exports = {
         {
           sectionName: 'Appendix to the guidelines',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/CovidPlaybook_Appendix_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/CovidPlaybook_Appendix_EN_v1.0.pdf',
@@ -190,11 +198,15 @@ module.exports = {
       title: 'Drive-thru manual for Sejong City',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-17T23:30:00-04:00'),
-      updatedAt: new Date('2020-04-17T23:30:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/Drive-thru_Manual_Sejong_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/Drive-thru_Manual_Sejong.pdf',
@@ -210,11 +222,15 @@ module.exports = {
       title: 'Screening center operation guide',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-19T23:30:00-04:00'),
-      updatedAt: new Date('2020-05-15T09:00:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/screening-center-operation-guide_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/screening-center-operation-guide.pdf',
@@ -234,11 +250,15 @@ module.exports = {
       title: 'Drive-thru manual',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-26T00:30:00-04:00'),
-      updatedAt: new Date('2020-05-06T23:00:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/KCDC-drive-thru-manual_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/KCDC-drive-thru-manual.pdf',
@@ -262,11 +282,16 @@ module.exports = {
       title: 'Management of healthcare facilities with confirmed cases',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-28T01:30:00-04:00'),
-      updatedAt: new Date('2020-04-28T01:30:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link:
+                '/management-of-healthcare-facilities-with-confirmed-cases_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link:
@@ -364,11 +389,16 @@ module.exports = {
         'Operation and management guidelines for nationally-designated inpatient beds',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-06T23:00:00-04:00'),
-      updatedAt: new Date('2020-05-17T20:00:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link:
+                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link:
@@ -385,11 +415,15 @@ module.exports = {
       title: 'Detailed guidelines for routine distancing in daily life',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-11T09:30:00-04:00'),
-      updatedAt: new Date('2020-06-18T20:30:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
           links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/routine-distancing-guidelines_KR.pdf',
+            },
             {
               text: 'English (English 🇺🇸)',
               link: '/routine-distancing-guidelines_EN.pdf',
@@ -425,6 +459,26 @@ module.exports = {
             {
               text: 'English (English 🇺🇸)',
               link: '/mobile-testing-truck.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 15,
+      category: DOCUMENT_CATEGORIES.KCDC,
+      slug: 'guidelines-for-school-systems',
+      title: 'Guidelines for pre-, elementary, middle, and special schools',
+      author: authors.find((a) => a.id === 1),
+      publishedAt: new Date('2020-06-28T14:30:00-04:00'),
+      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: '한국어 (Korean 🇰🇷)',
+              link: '/guidelines-for-school-systems_KR.pdf',
             },
           ],
         },
