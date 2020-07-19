@@ -222,7 +222,7 @@ module.exports = {
       title: 'Screening center operation guide',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-19T23:30:00-04:00'),
-      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
+      updatedAt: new Date('2020-07-19T19:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -238,6 +238,10 @@ module.exports = {
             {
               text: 'Italiano (Italian 🇮🇹)',
               link: '/screening-center-operation-guide_IT.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link: '/screening-center-operation-guide_ES.pdf',
             },
           ],
         },
@@ -471,7 +475,7 @@ module.exports = {
       title: 'Guidelines for pre-, elementary, middle, and special schools',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-06-28T14:30:00-04:00'),
-      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
+      updatedAt: new Date('2020-07-19T19:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -479,6 +483,10 @@ module.exports = {
             {
               text: '한국어 (Korean 🇰🇷)',
               link: '/guidelines-for-school-systems_KR.pdf',
+            },
+            {
+              text: 'English (English 🇺🇸)',
+              link: '/guidelines-for-school-systems_EN.pdf',
             },
           ],
         },
