@@ -475,7 +475,7 @@ module.exports = {
       title: 'Guidelines for pre-, elementary, middle, and special schools',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-06-28T14:30:00-04:00'),
-      updatedAt: new Date('2020-07-19T19:30:00-04:00'),
+      updatedAt: new Date('2020-08-16T13:30:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
