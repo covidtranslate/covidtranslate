@@ -286,7 +286,7 @@ module.exports = {
       title: 'Management of healthcare facilities with confirmed cases',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-04-28T01:30:00-04:00'),
-      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
+      updatedAt: new Date('2020-09-08T12:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -300,6 +300,11 @@ module.exports = {
               text: 'English (English 🇺🇸)',
               link:
                 '/management-of-healthcare-facilities-with-confirmed-cases.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link:
+                '/management-of-healthcare-facilities-with-confirmed-cases_ES.pdf',
             },
           ],
         },
@@ -475,7 +480,7 @@ module.exports = {
       title: 'Guidelines for pre-, elementary, middle, and special schools',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-06-28T14:30:00-04:00'),
-      updatedAt: new Date('2020-08-17T23:30:00-04:00'),
+      updatedAt: new Date('2020-09-08T12:00:00-04:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -487,6 +492,26 @@ module.exports = {
             {
               text: 'English (English 🇺🇸)',
               link: '/guidelines-for-school-systems_EN.pdf',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 16,
+      category: DOCUMENT_CATEGORIES.other,
+      slug: 'protocol-for-molecular-testing',
+      title: 'Protocol for molecular testing for COVID-19',
+      author: authors.find((a) => a.id === 4),
+      publishedAt: new Date('2020-09-08T12:00:00-04:00'),
+      updatedAt: new Date('2020-09-08T12:00:00-04:00'),
+      actions: [
+        {
+          sectionName: 'Downloads',
+          links: [
+            {
+              text: 'English (English 🇺🇸)',
+              link: '/protocol-for-molecular-testing.pdf',
             },
           ],
         },
