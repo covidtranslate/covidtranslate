@@ -217,7 +217,7 @@ export const PostLayout = ({ children, post, downloads }) => {
               <p>
                 <i>
                   Last updated on {post.updatedAt.toLocaleDateString('en')}{' '}
-                  {post.updatedAt.toLocaleTimeString('en')} EST
+                  {post.updatedAt.toLocaleTimeString('en')}
                 </i>
               </p>
               {children}

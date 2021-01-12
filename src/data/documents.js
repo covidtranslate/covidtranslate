@@ -398,7 +398,7 @@ module.exports = {
         'Operation and management guidelines for nationally-designated inpatient beds',
       author: authors.find((a) => a.id === 1),
       publishedAt: new Date('2020-05-06T23:00:00-04:00'),
-      updatedAt: new Date('2020-06-28T14:30:00-04:00'),
+      updatedAt: new Date('2021-01-11T23:30:00-05:00'),
       actions: [
         {
           sectionName: 'Downloads',
@@ -412,6 +412,11 @@ module.exports = {
               text: 'English (English 🇺🇸)',
               link:
                 '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds.pdf',
+            },
+            {
+              text: 'Español (Spanish 🇪🇸)',
+              link:
+                '/operation-and-management-guidelines-for-nationally-designated-inpatient-beds_ES.pdf',
             },
           ],
         },

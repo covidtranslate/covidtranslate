@@ -151,7 +151,7 @@ export const Post = ({
             <small>
               <i>
                 Last updated on {updatedAt.toLocaleDateString('en')}{' '}
-                {updatedAt.toLocaleTimeString('en')} EST
+                {updatedAt.toLocaleTimeString('en')}
               </i>
             </small>
           </p>
